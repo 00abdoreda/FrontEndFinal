@@ -1,0 +1,74 @@
+{
+  "homepage": "https://Ahmedyasser00.github.io/HealthcareBooking",
+  "name": "Healthcare Booking",
+  "proxy": "http://localhost:8000",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.12.3",
+    "@react-icons/all-files": "^4.1.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
+    "font-awesome": "^4.7.0",
+    "formik": "^2.2.9",
+    "formik-material-ui": "^4.0.0-alpha.2",
+    "framer-motion": "^10.12.2",
+    "https": "^1.0.0",
+    "mkcert": "^1.5.1",
+    "react": "^18.2.0",
+    "react-axios": "^2.0.6",
+    "react-bootstrap": "^2.7.4",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-paginate": "^8.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "5.0.1",
+    "react-spring": "^9.7.1",
+    "react-table": "^7.8.0",
+    "react-to-print": "^2.14.12",
+    "react-toastify": "^9.1.3",
+    "redux": "^4.2.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.2",
+    "styled-components": "^5.3.10",
+    "web-vitals": "^3.3.1",
+    "yup": "^1.1.1"
+  },
+  "scripts": {
+    "start": "set PORT=3001 && react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}

@@ -1,0 +1,70 @@
+redux use ==>
+// 1 create store
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import thunk from "redux-thunk";
+import { appReducer } from "../reducer/appReducer";
+export const store = createStore(
+  appReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+);
+
+// 2 create reducer
+import { ALLDATA } from "../types/type";
+
+const Initial = {};
+export const appReducer = (state = Initial, action) => {
+  switch (action.type) {
+    case ALLDATA:
+      return { name: action.data, age: action.age };
+
+    default:
+  }
+};
+
+// 3 create provider in index.js
+import { Provider } from "react-redux";
+import { store } from "./redux/store/store";
+
+<Provider store={store}>
+  <App />
+</Provider>
+
+// 4 create action with the type
+import axios from "axios";
+import { AllMOVIES, MovieApi } from "../types/moivesType";
+export const getAllMovie = () => {
+  return async (dispatch) => {
+    const res = await axios.get(MovieApi);
+    dispatch({
+      type: AllMOVIES,
+      data: res.data.results,
+      pages: parseInt(res.data.total_pages) >= 500 ? 500 : res.data.total_pages,
+    });
+  };
+};
+
+// 5 use useDispatch & useSelector 
+useDispatch for set store action
+useSelector to read data in store
+import { useDispatch, useSelector } from "react-redux";
+
+const dispatch = useDispatch();
+useEffect(() => {
+  dispatch(logData());
+}, []);
+const sel = useSelector((state) => state);
+useEffect(() => {
+  setstate(sel);
+  console.log(state);
+}, [state]);
+//////////////////////////////////////////////////////////
+
+panels-container ${
+            islogin ? `panels-1` : `panels-2`
+          }
+
+
+
+"homepage": "https://Ahmedyahia00.github.io/DoctorBooking",
+  "name": "DoctorBooking",
